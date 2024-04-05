@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Video Playlist MOD Xavier Suarez</title>
+<!-- Responsive viewport -->
+<meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' name='viewport'/>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
+<style type="text/css">
+*{margin:0;padding:0;box-sizing:border-box;text-transform:capitalize;}
+body{background:#566D7E;}
+.heading{color:#444;font-size:40px;text-align:center;padding:10px;}
+.container{display:grid;grid-template-columns:2fr 1fr;gap:15px;align-items:flex-start;padding:5px 5%;}
+.container .main-video{background:#151515;border-radius:5px;padding:10px;}
+.container .main-video video{width:100%;border-radius:5px;}
+.container .main-video .title{
+color:#fff;font-size:23px;padding-top:15px;padding-bottom:15px;}
+.container .video-list{
+background:#151515;border-radius:5px;height:582px;overflow-y:scroll;}
+.container .video-list::-webkit-scrollbar{
+width:7px;}
+.container .video-list::-webkit-scrollbar-track{
+background:#ccc;border-radius:50px;}
+.container .video-list::-webkit-scrollbar-thumb{
+background:#666;border-radius:50px;}
+.container .video-list .vid video{
+width:100px;border-radius:5px;}
+.container .video-list .vid{
+background:#41627E;display:flex;align-items:center;gap:15px;border-radius:5px;margin:10px;padding:10px;border:1px solid rgba(0,0,0,.1);cursor:pointer;}
+.container .video-list .vid:hover{
+background:#eee;}
+.container .video-list .vid.active{
+background:#2B3856;}
+.container .video-list .vid.active .title{
+color:#fff;}
+.container .video-list .vid .title{
+color:#333;font-size:17px;}
+@media (max-width: 991px){
+.container{grid-template-columns:1.5fr 1fr;padding:10px;}}
+@media (max-width: 768px){
+.container{grid-template-columns:1fr;}}
+.img-con img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     position: absolute;
+}
+
+
+
+.stars-con {
+     width: 6rem;
+     align-items: center;
+     justify-content: center;
+}
+
+.stars-con img {
+     width: 100%;
+}
+.mv-categories {
+     display: flex;
+     gap: 1.5rem;
+     margin-bottom: 0.75rem;
+}
+
+.mv-categories > div {
+     background-color: rgba(255, 255, 255, 0.1);
+     padding: 6px 8px;
+     border-radius: 9px;
+}
+
+.mv-desc {
+     text-align: center;
+     color: rgb(197, 197, 197);
+     padding: 0 0.75rem;
+}
+
+.detailes-list {
+     display: flex;
+     gap: 1rem;
+     margin: 0.75rem 0;
+     justify-content: center;
+     align-items: center;
+     height: fit-content;
+}
+
+.detailes-list span {
+     background-color: rgba(231, 212, 0, 0.914);
+     padding: 3px;
+     font-weight: 400;
+     border-radius: px;
+     margin-right: 6px;
+     color: #000;
+}
+
+.mv-con {
+     margin-top: 20rem;
+     z-index: 10000000;
+     width: 100vw;
+}
+
+.stars-con {
+     width: 6rem;
+     align-items: center;
+     justify-content: center;
+}
+
+.stars-con img {
+     width: 100%;
+}
+
+.mv-title {
+     text-align: center;
+     width: 100%;
+     color: rgb(233, 233, 233);
+     letter-spacing: 2px;
+     font-size: 1.6rem;
+     z-index: 1;
+     margin-bottom: 0.8rem;
+}
+
+.mv-detailes, .mv-detailes2 {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin-top: 0.2rem;
+     z-index: 1;
+}
+
+.mv-date {
+     text-align: center;
+     z-index: 1;
+     padding: 0.4rem;
+     width: 3.65rem;
+     border-radius: 4px;
+     background-color: #728FCE;
+}
+.detailes-list {
+     display: flex;
+     gap: 1rem;
+     margin: 0.75rem 0;
+     justify-content: center;
+     align-items: center;
+     height: fit-content;
+}
+
+.detailes-list span {
+     background-color: rgba(231, 212, 0, 0.914);
+     padding: 3px;
+     font-weight: 400;
+     border-radius: 6px;
+     margin-right: 6px;
+     color: #fff;
+}
+
+.mv-categories {
+     display: flex;
+     gap: 1.5rem;
+     margin-bottom: 0.75rem;
+}
+
+.mv-categories > div {
+     background-color: rgba(255, 255, 255, 0.1);
+     padding: 6px 8px;
+     border-radius: 9px;
+}
+
+.mv-desc {
+     text-align: center;
+     color: rgb(197, 197, 197);
+     padding: 0 0.75rem;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="main-video">
+<div class="video">
+<video class='js-player' poster="https://i0.wp.com/www.behindzscene.net/wp-content/uploads/2022/05/Moon-Knight-Actor-Teases-3rd-Superhero-Suit-for-Jake-Lockley.jpg" controls muted autoplay> 
+<source src="https://youtu.be/zYTricejYRg" type="application/x-mpegURL">
+</video>
+<!--<video src="http://vods.tuxchannel.tv:80/series/dragon%20ball/episodio%20001.mkv" poster="https://media.discordapp.net/attachments/1000156875129634857/1002018284067102811/dcPc6esbABSljhnPuYxw7qJzhzq.jpg" controls muted autoplay></video>-->
+
+<h3 class="title">Moon Knight </h3></div></div>
+
+          
+                              
+				                 <div class="mv-detailes">
+                              <!-- معلومات الفلم-->
+                              <p class="mv-date">
+                                   2022
+                              </p> 
+                              <!-- Movie Duration | Stars | IMDb-->
+                         <div class="detailes-list">
+                              <p>1 season </p>
+                              <div class="stars-con">
+                                   <img src="https://www.raed.net/img?id=139752" alt="image">
+                              </div>
+                              <div>
+                                   <span>IMDb</span>6.3
+                              </div>
+                         </div>
+                              <!-- Movie Categories -->
+                              <div class="mv-categories">
+      
+       
+                                   <div>خيال</div>      
+                                   <div>غموض</div>
+                                   <div>رعب</div>
+                                  
+                              </div>
+                         </div>
+                         
+<div class="video-list">
+<div class="vid active"> 
+<video src="https://pr3.gemzawy.com/hls2/02/00056/7nq0pcru8t7r_,l,n,h,x,o,.urlset/master.m3u8?t=TuWmAgiYfttS6BsLVb3HU_u29nf4fEjGDsPnY3qfOyw&s=1668884475&e=86400&f=281279&srv=s-13de.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
+<h3 class="title">الحلقة الأولى</h3></div>
+<div class="vid">
+<video src="https://s-13de.gemzawy.com/hls2/03/00056/ihy27wi5l71d_,l,n,h,x,o,.urlset/master.m3u8?t=wwFzzQWdDXCxL9kcDaZ4_70vqqRFP3HabaC5rfjp8sM&s=1668884706&e=86400&f=283837&srv=127.0.0.1&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
+<h3 class="title">الحلقة الثانية</h3></div>
+<div class="vid">
+<video src="https://pr3.gemzawy.com/hls2/02/00057/0yr16di5yuol_,l,n,h,x,o,.urlset/master.m3u8?t=SnBamsY6EunnmsfHapBPajD_P2g8kGDkocQ9fOtHjec&s=1668884729&e=86400&f=287413&srv=s-13de.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
+<h3 class="title">الحلقة الثالثة</h3></div>
+<div class="vid">
+<video src="https://pr3.gemzawy.com/hls2/03/00058/d8hiteftt8g1_,l,n,h,x,o,.urlset/master.m3u8?t=mYZWxbjc7WfIrg207M_d6zNDuHEaABD1BpBi2DgmFBE&s=1668884764&e=86400&f=291413&srv=s11.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
+<h3 class="title">الحلقة الرابعة</h3></div>
+<div class="vid">
+<video src="https://pr3.gemzawy.com/hls2/01/00059/po8czqaty6cx_,l,n,h,x,o,.urlset/master.m3u8?t=c8C_zpfGYVlKhO2KFbxtsiS4F30mTnnPd_lFUcC24Hk&s=1668884807&e=86400&f=296297&srv=s11.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
+<h3 class="title">الحلقة الخامسة</h3></div>
+<div class="vid">
+<video src="https://pr3.gemzawy.com/hls2/04/00060/taq142fhlpmp_,l,n,x,o,.urlset/master.m3u8?t=i50lO-fyUb_wFi_iRlCF5Dl6bK96lU48rQA-ED0RRAQ&s=1668884847&e=86400&f=300713&srv=s-13de.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
+<h3 class="title">الحلقة الأخيرة</h3></div>
+<div class="vid">
+
+
+</div></div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script type="text/javascript">
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.main-video video');
+let title = document.querySelector('.main-video .title');
+
+listVideo.forEach(video =>{
+  video.onclick = () =>{
+    listVideo.forEach(vid => vid.classList.remove('active'));
+    video.classList.add('active');
+    if(video.classList.contains('active')){
+      let src = video.children[0].getAttribute('src');
+      mainVideo.src = src;
+      let text = video.children[1].innerHTML;
+      title.innerHTML = text;
+    };
+  };
+});
+</script>
+<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+<script>//<![CDATA[
+const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
+//]]></script>
+</body>
+</html>
