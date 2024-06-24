@@ -1,264 +1,122 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Video Playlist MOD Xavier Suarez</title>
-<!-- Responsive viewport -->
-<meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' name='viewport'/>
-<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css"/>
-<style type="text/css">
-*{margin:0;padding:0;box-sizing:border-box;text-transform:capitalize;}
-body{background:#566D7E;}
-.heading{color:#444;font-size:40px;text-align:center;padding:10px;}
-.container{display:grid;grid-template-columns:2fr 1fr;gap:15px;align-items:flex-start;padding:5px 5%;}
-.container .main-video{background:#151515;border-radius:5px;padding:10px;}
-.container .main-video video{width:100%;border-radius:5px;}
-.container .main-video .title{
-color:#fff;font-size:23px;padding-top:15px;padding-bottom:15px;}
-.container .video-list{
-background:#151515;border-radius:5px;height:582px;overflow-y:scroll;}
-.container .video-list::-webkit-scrollbar{
-width:7px;}
-.container .video-list::-webkit-scrollbar-track{
-background:#ccc;border-radius:50px;}
-.container .video-list::-webkit-scrollbar-thumb{
-background:#666;border-radius:50px;}
-.container .video-list .vid video{
-width:100px;border-radius:5px;}
-.container .video-list .vid{
-background:#41627E;display:flex;align-items:center;gap:15px;border-radius:5px;margin:10px;padding:10px;border:1px solid rgba(0,0,0,.1);cursor:pointer;}
-.container .video-list .vid:hover{
-background:#eee;}
-.container .video-list .vid.active{
-background:#2B3856;}
-.container .video-list .vid.active .title{
-color:#fff;}
-.container .video-list .vid .title{
-color:#333;font-size:17px;}
-@media (max-width: 991px){
-.container{grid-template-columns:1.5fr 1fr;padding:10px;}}
-@media (max-width: 768px){
-.container{grid-template-columns:1fr;}}
-.img-con img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     position: absolute;
-}
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1.0 , minimum-scale=1.0 , maximum-scale=1.0">
+
+  <title>تطبيق RsR Tv </title>
+  <link rel="icon" href="https://k.top4top.io/p_3018briwy0.png" type="image/x-icon">
+
+    <!-- أبل تاتش أيكون -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://k.top4top.io/p_3018briwy0.png">
+
+    <!-- شعار للمشاركة على الفيسبوك وتويتر، وغيرها -->
+    <meta property="og:image" content="https://k.top4top.io/p_3018briwy0.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- تويتر كارد -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://k.top4top.io/p_3018briwy0.png">
+      
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&amp;display=swap" rel="stylesheet">
 
 
 
-.stars-con {
-     width: 6rem;
-     align-items: center;
-     justify-content: center;
-}
 
-.stars-con img {
-     width: 100%;
-}
-.mv-categories {
-     display: flex;
-     gap: 1.5rem;
-     margin-bottom: 0.75rem;
-}
-
-.mv-categories > div {
-     background-color: rgba(255, 255, 255, 0.1);
-     padding: 6px 8px;
-     border-radius: 9px;
-}
-
-.mv-desc {
-     text-align: center;
-     color: rgb(197, 197, 197);
-     padding: 0 0.75rem;
-}
-
-.detailes-list {
-     display: flex;
-     gap: 1rem;
-     margin: 0.75rem 0;
-     justify-content: center;
-     align-items: center;
-     height: fit-content;
-}
-
-.detailes-list span {
-     background-color: rgba(231, 212, 0, 0.914);
-     padding: 3px;
-     font-weight: 400;
-     border-radius: px;
-     margin-right: 6px;
-     color: #000;
-}
-
-.mv-con {
-     margin-top: 20rem;
-     z-index: 10000000;
-     width: 100vw;
-}
-
-.stars-con {
-     width: 6rem;
-     align-items: center;
-     justify-content: center;
-}
-
-.stars-con img {
-     width: 100%;
-}
-
-.mv-title {
-     text-align: center;
-     width: 100%;
-     color: rgb(233, 233, 233);
-     letter-spacing: 2px;
-     font-size: 1.6rem;
-     z-index: 1;
-     margin-bottom: 0.8rem;
-}
-
-.mv-detailes, .mv-detailes2 {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     margin-top: 0.2rem;
-     z-index: 1;
-}
-
-.mv-date {
-     text-align: center;
-     z-index: 1;
-     padding: 0.4rem;
-     width: 3.65rem;
-     border-radius: 4px;
-     background-color: #728FCE;
-}
-.detailes-list {
-     display: flex;
-     gap: 1rem;
-     margin: 0.75rem 0;
-     justify-content: center;
-     align-items: center;
-     height: fit-content;
-}
-
-.detailes-list span {
-     background-color: rgba(231, 212, 0, 0.914);
-     padding: 3px;
-     font-weight: 400;
-     border-radius: 6px;
-     margin-right: 6px;
-     color: #fff;
-}
-
-.mv-categories {
-     display: flex;
-     gap: 1.5rem;
-     margin-bottom: 0.75rem;
-}
-
-.mv-categories > div {
-     background-color: rgba(255, 255, 255, 0.1);
-     padding: 6px 8px;
-     border-radius: 9px;
-}
-
-.mv-desc {
-     text-align: center;
-     color: rgb(197, 197, 197);
-     padding: 0 0.75rem;
-}
-
-</style>
 </head>
 <body>
-<div class="container">
-<div class="main-video">
-<div class="video">
-<video class='js-player' poster="https://i0.wp.com/www.behindzscene.net/wp-content/uploads/2022/05/Moon-Knight-Actor-Teases-3rd-Superhero-Suit-for-Jake-Lockley.jpg" controls muted autoplay> 
-<source src="https://youtu.be/zYTricejYRg" type="application/x-mpegURL">
-</video>
-<!--<video src="http://vods.tuxchannel.tv:80/series/dragon%20ball/episodio%20001.mkv" poster="https://media.discordapp.net/attachments/1000156875129634857/1002018284067102811/dcPc6esbABSljhnPuYxw7qJzhzq.jpg" controls muted autoplay></video>-->
-
-<h3 class="title">Moon Knight </h3></div></div>
-
-          
-                              
-				                 <div class="mv-detailes">
-                              <!-- معلومات الفلم-->
-                              <p class="mv-date">
-                                   2022
-                              </p> 
-                              <!-- Movie Duration | Stars | IMDb-->
-                         <div class="detailes-list">
-                              <p>1 season </p>
-                              <div class="stars-con">
-                                   <img src="https://www.raed.net/img?id=139752" alt="image">
-                              </div>
-                              <div>
-                                   <span>IMDb</span>6.3
-                              </div>
-                         </div>
-                              <!-- Movie Categories -->
-                              <div class="mv-categories">
+  <style>
+      body{
+          background-color: #0A0A0A;
+          background-position: center center!important;
+          background-size: cover!important;
+          background-repeat: no-repeat!important;
+          background-attachment: fixed!important;
+          }
+      b{font-size:20px}
+      p{display: block;}
+      a:link, a:visited {color: #00c6ba;text-decoration: none;transition: all .3s;}
+      body{font-family: 'Changa', sans-serif;}
+      ::selection {
+        background: #00c6ba;
+        color: #fff;
+        text-shadow: none;}
+        .bottom{text-decoration: none;transition: all .3s;}
+  .mo{
+    border-radius: 10px;
+  }
+    .moz{
+      border-radius: 14px;
+    }
+    .size {
+      font-wight: bold;
+font-size: 12px;
       
-       
-                                   <div>خيال</div>      
-                                   <div>غموض</div>
-                                   <div>رعب</div>
-                                  
-                              </div>
-                         </div>
-                         
-<div class="video-list">
-<div class="vid active"> 
-<video src="https://pr3.gemzawy.com/hls2/02/00056/7nq0pcru8t7r_,l,n,h,x,o,.urlset/master.m3u8?t=TuWmAgiYfttS6BsLVb3HU_u29nf4fEjGDsPnY3qfOyw&s=1668884475&e=86400&f=281279&srv=s-13de.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
-<h3 class="title">الحلقة الأولى</h3></div>
-<div class="vid">
-<video src="https://s-13de.gemzawy.com/hls2/03/00056/ihy27wi5l71d_,l,n,h,x,o,.urlset/master.m3u8?t=wwFzzQWdDXCxL9kcDaZ4_70vqqRFP3HabaC5rfjp8sM&s=1668884706&e=86400&f=283837&srv=127.0.0.1&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
-<h3 class="title">الحلقة الثانية</h3></div>
-<div class="vid">
-<video src="https://pr3.gemzawy.com/hls2/02/00057/0yr16di5yuol_,l,n,h,x,o,.urlset/master.m3u8?t=SnBamsY6EunnmsfHapBPajD_P2g8kGDkocQ9fOtHjec&s=1668884729&e=86400&f=287413&srv=s-13de.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
-<h3 class="title">الحلقة الثالثة</h3></div>
-<div class="vid">
-<video src="https://pr3.gemzawy.com/hls2/03/00058/d8hiteftt8g1_,l,n,h,x,o,.urlset/master.m3u8?t=mYZWxbjc7WfIrg207M_d6zNDuHEaABD1BpBi2DgmFBE&s=1668884764&e=86400&f=291413&srv=s11.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
-<h3 class="title">الحلقة الرابعة</h3></div>
-<div class="vid">
-<video src="https://pr3.gemzawy.com/hls2/01/00059/po8czqaty6cx_,l,n,h,x,o,.urlset/master.m3u8?t=c8C_zpfGYVlKhO2KFbxtsiS4F30mTnnPd_lFUcC24Hk&s=1668884807&e=86400&f=296297&srv=s11.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
-<h3 class="title">الحلقة الخامسة</h3></div>
-<div class="vid">
-<video src="https://pr3.gemzawy.com/hls2/04/00060/taq142fhlpmp_,l,n,x,o,.urlset/master.m3u8?t=i50lO-fyUb_wFi_iRlCF5Dl6bK96lU48rQA-ED0RRAQ&s=1668884847&e=86400&f=300713&srv=s-13de.gemzawy.com&i=0.1" muted poster="https://i0.wp.com/www.comicsuniverse.it/wp-content/uploads/2022/05/moon-knight-concept-art-oscar-isaac-mcu-marvel.jpg?fit=1280%2C720&ssl=1"></video>
-<h3 class="title">الحلقة الأخيرة</h3></div>
-<div class="vid">
+    }
+  </style>
+  <div style="text-align: center;color: #fff;">
+    <br><br>
+      <img src="https://firebasestorage.googleapis.com/v0/b/rsr-bdd85.appspot.com/o/Picsart_24-06-15_21-09-17-309_copy_745x745.jpg?alt=media&token=5ac5b3ba-cbcc-4ac7-9d77-d0fff3dc8b53" style="width: 340px; height: 340px;" class="moz">
+      <br>
 
 
-</div></div>
-<!-- partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-<script type="text/javascript">
-let listVideo = document.querySelectorAll('.video-list .vid');
-let mainVideo = document.querySelector('.main-video video');
-let title = document.querySelector('.main-video .title');
+    <h4><span style="color :#ffd700">RsR Tv </span>يمكنك مشاهدة جميع المحتوى على تطبيق الذي يضم قنوات رياضية وأفلام ومسلسلات عالمية</h4>   
 
-listVideo.forEach(video =>{
-  video.onclick = () =>{
-    listVideo.forEach(vid => vid.classList.remove('active'));
-    video.classList.add('active');
-    if(video.classList.contains('active')){
-      let src = video.children[0].getAttribute('src');
-      mainVideo.src = src;
-      let text = video.children[1].innerHTML;
-      title.innerHTML = text;
-    };
-  };
-});
-</script>
-<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-<script>//<![CDATA[
-const players = Array.from(document.querySelectorAll('.js-player')).map(player => new Plyr(player));
-//]]></script>
-</body>
-</html>
+
+
+<span style="color :#ffd700;"> مميزات التطبيق </span>
+<br>
+<br>
+<img src="https://firebasestorage.googleapis.com/v0/b/rsr-bdd85.appspot.com/o/%D8%A8%D9%8A%D9%86%2FPicsart_24-06-21_01-12-42-984_copy_672x374.png?alt=media&token=5ca8dff5-f82f-439e-bdbc-a688db4178bd" style="width:340px;height:190px;" class="mo">
+<br><p></p><p>
+<img src="https://firebasestorage.googleapis.com/v0/b/rsr-bdd85.appspot.com/o/%D8%A8%D9%8A%D9%86%2FPicsart_24-06-21_01-05-33-368_copy_552x307.png?alt=media&token=648ffe72-4837-4b21-a4ae-4f019b967c4d" style="width:340px;height:190px;&quot;">
+<br><p></p><p>
+<img src="https://firebasestorage.googleapis.com/v0/b/rsr-bdd85.appspot.com/o/%D8%A8%D9%8A%D9%86%2FPicsart_24-06-21_01-07-03-453_copy_528x294.png?alt=media&token=33086a1a-4176-4f51-b22e-ed85be3ea2f0" style="width:340px;height:190px;&quot;">
+
+
+<br>
+<br>
+
+
+
+      <span style="color :#ffd700;">نسخة الاندرويد</span>
+      <br>
+      <h5>  شاهد القنوات الرياضيةالمشفرة وكافة البطولات الأوربية بدون تقطيع حيث وفرنا لكم العديد من السيرفرات المختلفه وبجودات متعدده شاهد واستمتع مجانا</h5>
+
+      <br>
+      <img src="https://firebasestorage.googleapis.com/v0/b/rsr-bdd85.appspot.com/o/%D8%A8%D9%8A%D9%86%2FPicsart_24-06-21_01-23-12-984_copy_640x640.png?alt=media&token=009793b2-10ef-4663-9b36-41045700e6d6" style="width:340px; heght: 340px;">
+      <br>
+
+
+<p></p><p>
+
+
+
+  </p>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://www.mediafire.com/file/mm5huhmv2yxwgtw/RsR_Tv_5.1.apk/file" style="font-family: verdana;"><img border="0" data-original-height="150" data-original-width="500" height="80" src="https://firebasestorage.googleapis.com/v0/b/rsr-bdd85.appspot.com/o/%D8%A8%D9%8A%D9%86%2FPicsart_24-06-21_01-28-49-134_copy_2460x737.png?alt=media&token=3d59ebc3-f443-42f9-aa02-2547ccd5ea91" width="260"></a></div>
+
+<br>
+</p><p>
+
+</p><div style="text-align: center;">
+<span style="font-family: verdana;"><span style="font-family: arial, helvetica, sans-serif;"><b></b></span><br>
+</span><div class="separator" style="clear: both; text-align: center;">
+<span style="font-family: verdana;"><span style="font-family: arial, helvetica, sans-serif;"><b></b></span>
+
+
+
+
+</span></div>
+<br>
+<br>
+
+<center><a href="https://t.me/RsR_Tv">قناة التلكرام
+<p></p></a>
+<h4>© جميع الحقوق محفوظة لـ ستوديو RsR Tv 
+</h4>
+</body></html>
